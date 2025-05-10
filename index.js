@@ -5,7 +5,9 @@ const app = express();
 const PORT = 3000;
 
 // Replace with your actual token from ipinfo.io
-const IPINFO_TOKEN = 'd9a8e75e598172';
+// const IPINFO_TOKEN = 'd9a8e75e598172';
+const IPINFO_TOKEN = process.env.IPINFO_TOKEN;
+
 
 app.get('/', async (req, res) => {
     // let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
